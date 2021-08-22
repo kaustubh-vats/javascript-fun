@@ -17,7 +17,7 @@ pip install pickle
 ```
 + Then You have to fork this repo and clone it in your device using ```git clone https://github.com/kaustubh-vats/javascript-fun``` command
 + Run the ```main.py``` file
-+ Open any Browser and put [127.0.0.0:5000] in url
++ Open any Browser and put [127.0.0.1:5000](127.0.0.1:5000) in url
     + You can also change the port number accordingly
 
 # Declartion
