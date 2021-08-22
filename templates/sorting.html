@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sorting Visualization</title>
+        <link rel="icon" href="{{url_for('static', filename='icon/favicon.ico')}}"/>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/design.css')}}" /> 
+    </head>
+    <body>
+        <audio hidden="true" src="{{url_for('static',filename='audio/sortingbg.mp3')}}" id="bgmusic" loop autoplay></audio>
+        <audio hidden="true" src="{{url_for('static',filename='audio/complete.mp3')}}" id="complete"></audio>
+        <script src="{{url_for('static', filename='js/sorting.js')}}"></script>
+        <script>
+            myVar = myFunc({{data|tojson}})
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,61 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    background: url(/static/images/bg.jpg);
+    background-size: cover;
+    overflow: hidden; 
+    position: fixed;
+    padding: 0;
+}
+*{
+    cursor: url(/static/images/cursor.ico),default;
+}
+.myImage{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: auto;
+}
+.textGame{
+    right: 10%;
+    top: 10%;
+    color:rgb(34, 227, 252);
+    opacity: 0.4;
+    font-size: 100px;
+    position: absolute;
+}
+ul{
+    font-size: 30px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+li{
+    list-style:none;
+    margin-bottom: 50px;
+}
+ul :nth-child(even){
+    margin-left: 30px;
+}
+.elementsarr{
+    display: inline-block;
+    background-color: #0062ff;
+    text-align: center;
+    margin: 10px;
+}
+ul li:before{
+    content: "\00BB";
+    margin-right: 10px;
+    color: rgb(34, 227, 252);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover,li:hover{
+    color: rgb(34, 227, 252);
+    font-size: 50px;
+}

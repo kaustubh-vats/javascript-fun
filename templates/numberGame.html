@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Number Game</title>
+        <link rel="icon" href="{{url_for('static', filename='icon/favicon.ico')}}"/>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/number.css')}}" /> 
+    </head>
+    <body>
+        <audio hidden="true" src="{{url_for('static',filename='audio/numberbg.mp3')}}" id="bgmusic" loop autoplay></audio>
+        <audio hidden="true" src="{{url_for('static',filename='audio/correct.mp3')}}" id="correct"></audio>
+        <audio hidden="true" src="{{url_for('static',filename='audio/complete.mp3')}}" id="complete"></audio>
+        <div id="start">
+            <label class="switch">
+                <input type="checkbox" id="multiplayer" onchange="multiplayerCheck()">
+                <span class="slider">Multiplayer</span>
+            </label>
+            <button onclick='start()'>Start</button>
+        </div>
+        <div id="score">
+            <h3 id="player1">Player 1 : 0</h3>
+            <h3 id="player2">Player 2 : 0</h3>
+            <h1 id="displayturn">Player 1</h1>
+        </div>
+        <div class="grid" id="container">
+        </div>
+        <h1 id="winner">You Won</h1>
+        <script src="{{url_for('static', filename='js/number.js')}}"></script>
+    </body>
+
+</html>

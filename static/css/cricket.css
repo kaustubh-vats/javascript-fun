@@ -1,0 +1,85 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    background: url(/static/images/stadium.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+#mainDiv{
+    display: none;
+    padding: 30px;
+    background: linear-gradient(45deg,rgba(135, 228, 235, 0.555), #808dff91);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.733);
+}
+#scoreboard{
+    display: none;padding: 30px;
+    background: linear-gradient(45deg,rgba(135, 228, 235, 0.555), #808dff91);
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.733);
+}
+table{
+    color: #ffffff;
+    padding: 10px;
+}
+.displayTeams{
+    display: inline-block;
+    color: #ffffff;
+}
+th, td{
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.device{
+    display: inline-block;
+    color: #ffffff;
+}
+.player{
+    display: inline-block;
+    color: #ffffff;
+}
+#scorediv{
+    color: #ffffff;
+    display: inline-block;
+}
+#mybuttons{
+    bottom: 0;
+    margin: 20px;
+}
+.scoreButton{
+    background: linear-gradient(45deg,rgb(255, 0, 0), #ff8800);
+    border-radius: 50%;
+    margin: 10px;
+    color: white;
+    outline: none;
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+*{
+    cursor: url(/static/images/cursor.ico),default;
+}
+#start{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: skyblue;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    display: block;
+    margin: 10px 35px;
+}
+#start:hover{
+    background-color: #80ffb0;
+}

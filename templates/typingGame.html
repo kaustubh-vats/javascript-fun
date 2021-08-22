@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Typing Game</title>
+        <link rel="icon" href="{{url_for('static', filename='icon/favicon.ico')}}"/>
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/typing.css')}}" />
+    </head>
+    <body>
+        <div class="topView" id="optionMenu">
+            <input id="1min" type="radio" name="gameType" value="1"/>
+            <label for="1min">1 minute</label>
+            <input id="2min" type="radio" name="gameType" value="2"/>
+            <label for="2min">2 minute</label>
+            <input id="5min" type="radio" name="gameType" value="5"/>
+            <label for="5min">5 minute</label>
+            <button type="button" onclick='initialize({{ data|tojson }})'>Start</button>
+        </div>
+        <h1 id="timer">00:00:00</h1>
+        <h1 id="highscore">HighScore: {{highscore}}</h1>
+        <div class="keyboardbg">
+            <h1 id="textrandom">Loading...</h1>
+            <audio hidden="true" src="{{url_for('static',filename='audio/correct.mp3')}}" id="correct"></audio>
+            <audio hidden="true" src="{{url_for('static',filename='audio/complete.mp3')}}" id="complete"></audio>
+            <input name="inp" id="inputbox" autocomplete="off">
+            <div tabindex="0" id="keyboardBase" class="keyboard-base">
+                <div name='192' class="key inkey">~</div>
+                <div name='49' class="key inkey">1</div>
+                <div name='50' class="key inkey">2</div>
+                <div name='51' class="key inkey">3</div>
+                <div name='52' class="key inkey">4</div>
+                <div name='53' class="key inkey">5</div>
+                <div name='54' class="key inkey">6</div>
+                <div name='55' class="key inkey">7</div>
+                <div name='56' class="key inkey">8</div>
+                <div name='57' class="key inkey">9</div>
+                <div name='48' class="key inkey">0</div>
+                <div name='189' class="key inkey">-</div>
+                <div name='187' class="key inkey">+</div>
+                <div name='8' class="key delete">Backspace</div>
+                <div name='9' class="key tab">Tab</div>
+                <div name='81' class="key inkey">Q</div>
+                <div name='87' class="key inkey">W</div>
+                <div name='69' class="key inkey">E</div>
+                <div name='82' class="key inkey">R</div>
+                <div name='84' class="key inkey">T</div>
+                <div name='89' class="key inkey">Y</div>
+                <div name='85' class="key inkey">U</div>
+                <div name='73' class="key inkey">I</div>
+                <div name='79' class="key inkey">O</div>
+                <div name='80' class="key inkey">P</div>
+                <div name='219' class="key inkey">[</div>
+                <div name='221' class="key inkey">]</div>
+                <div name='220' class="key inkey backslash">\</div>
+                <div name='20' class="key capslock">CapsLock</div>
+                <div name='65' class="key inkey">A</div>
+                <div name='83' class="key inkey">S</div>
+                <div name='68' class="key inkey ">D</div>
+                <div name='70' class="key inkey ">F</div>
+                <div name='71' class="key inkey ">G</div>
+                <div name='72' class="key inkey ">H</div>
+                <div name='74' class="key inkey ">J</div>
+                <div name='75' class="key inkey ">K</div>
+                <div name='76' class="key inkey ">L</div>
+                <div name='186' class="key inkey ">;</div>
+                <div name='222' class="key inkey ">'</div>
+                <div name='13' class="key return">Enter</div>
+                <div name='16' class="key leftshift">Shift</div>
+                <div name='90' class="key inkey ">Z</div>
+                <div name='88' class="key inkey ">X</div>
+                <div name='67' class="key inkey ">C</div>
+                <div name='86' class="key inkey ">V</div>
+                <div name='66' class="key inkey ">B</div>
+                <div name='78' class="key inkey ">N</div>
+                <div name='77' class="key inkey ">M</div>
+                <div name='188' class="key inkey ">,</div>
+                <div name='190' class="key inkey ">.</div>
+                <div name='191' class="key inkey ">/</div>
+                <div name='16' class="key rightshift">Shift</div>
+                <div name='17' class="key leftctrl">Ctrl</div>
+                <div name='18' class="key">Alt</div>
+                <div name='90' class="key command">Command</div>
+                <div name='32' class="key inkey  space">Space</div>
+                <div name='90' class="key command">command</div>
+                <div name='18' class="key">Alt</div>
+                <div name='17' class="key">Ctrl</div>
+                <div name='0' class="key">Fn</div>
+            </div>
+        </div>
+        <script src="{{url_for('static', filename='js/typing.js')}}"></script>
+    </body>
+</html>

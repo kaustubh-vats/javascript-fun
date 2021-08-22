@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <link rel="icon" href="{{url_for('static', filename='icon/favicon.ico')}}"/> 
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/form.css')}}" /> 
+    </head>
+    <body>
+        <form method="POST" id="myform" onsubmit="return verification()">
+            <select name="algo">
+                <option value="bubble">Bubble sort</option>
+                <option value="insertion">Insertion sort</option>
+                <option value="selection">Selection sort</option>
+            </select><br>
+            <select id="arrayType" name="arrayType" onchange="changeUi()">
+                <option value="none" selected>Select Array Type</option>
+                <option value="random">Random</option>
+                <option value="myarray">My array</option>
+            </select><br>
+            <input name="array" type="text" id="array" placeholder="Enter space separated array"/>
+            <input name="size" min="1" max="30" type="number" id="size" placeholder="Size of array"/>
+            <br>
+            <button type="submit" value="Continue">Continue</button>
+        </form>
+        <script src="{{url_for('static', filename='js/form.js')}}"></script>
+    </body>
+
+</html>

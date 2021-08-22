@@ -1,0 +1,48 @@
+h1 {
+    color: blue;
+    font-weight: 500;
+}
+body {
+    padding: 15px;
+    margin: 0;
+    background: linear-gradient(45deg,skyblue, #80ffb0);
+}
+form{
+    display: block;
+    width: 630px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 5px gray;
+}
+input, select{
+    padding: 10px;
+    width: 600px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: skyblue;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    display: block;
+    margin: 0 auto;
+}
+button:hover{
+    background-color: #80ffb0;
+}
+input:focus{
+    outline: none !important;
+    border: 1px solid skyblue;
+    box-shadow: 0 0 10px #80ffb0;
+}
+
+#array, #size{
+    display: none;
+}

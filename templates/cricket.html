@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cricket Game</title>
+        <link rel="icon" href="{{url_for('static', filename='icon/favicon.ico')}}"/>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/cricket.css')}}" />
+    </head>
+    <body>
+        <audio hidden="true" src="{{url_for('static',filename='audio/cricketbg.mp3')}}" id="stadium" loop autoplay></audio>
+        <audio hidden="true" src="{{url_for('static',filename='audio/hindi/six1.mpeg')}}" id="six1"></audio>
+        <audio hidden="true" src="{{url_for('static',filename='audio/hindi/six2.mp3')}}" id="six2"></audio>
+        <audio hidden="true" src="{{url_for('static',filename='audio/hindi/out1.mpeg')}}" id="out1"></audio>
+        <audio hidden="true" src="{{url_for('static',filename='audio/hindi/out2.mpeg')}}" id="out2"></audio>
+        <audio hidden="true" src="{{url_for('static',filename='audio/hindi/four1.mpeg')}}" id="four1"></audio>
+        <audio hidden="true" src="{{url_for('static',filename='audio/hindi/four2.mpeg')}}" id="four2"></audio>
+        <button id="start" onclick='start({{data|tojson}})'>Start</button>
+        <div id="mainDiv">            
+            <h1 id="innings">Welcome to Cricket Game</h1>
+            <div class="device">
+                <img height="100px" width="100px" id="device" src="/static/images/cricket/device1.png"/>
+                <div>
+                    <h3 id="devicescore">0/0</h3>
+                </div>
+                <div>
+                    <h3 id="Batsmancurrentdevice">Bating upcoming</h3>
+                </div>
+            </div>
+            <div id="scorediv">
+                <h1 id="score">0/0</h1>
+                <h3 id="overs">Over: 0</h3>
+                <h3 id="runrate"></h3>
+                <h3 id="requiredrate"></h3>
+                <h3 id="need"></h3>
+            </div>
+            <div class="player">
+                <img height="100px" width="100px" id="player" src="/static/images/cricket/player1.png"/>
+                <div>
+                    <h3 id="playerscore">0/0</h3>
+                </div>
+                <div>
+                    <h3 id="Batsmancurrentplayer">Bating upcoming</h3>
+                </div>
+            </div>
+            <div id="mybuttons">
+                <button type="button" class="scoreButton" onclick="myrun(1)">1</button>
+                <button type="button" class="scoreButton" onclick="myrun(2)">2</button>
+                <button type="button" class="scoreButton" onclick="myrun(3)">3</button>
+                <button type="button" class="scoreButton" onclick="myrun(4)">4</button>
+                <button type="button" class="scoreButton" onclick="myrun(6)">6</button>
+            </div>
+        </div>
+        <div id="scoreboard">
+            <h1 id="winner">Winner</h1>
+            <div class="displayTeams">
+                <h3>My team</h3>
+                <table>
+                    <tr>
+                        <th>Batsman</th>
+                        <th>runs</th>
+                    </tr>
+                    <tr>
+                        <td name="batsmanscoremy"></td>
+                        <td name="scorebatsmanmy"></td>
+                    </tr>
+                    <tr>
+                        <td name="batsmanscoremy"></td>
+                        <td name="scorebatsmanmy"></td>
+                    </tr>
+                    <tr>
+                        <td name="batsmanscoremy"></td>
+                        <td name="scorebatsmanmy"></td>
+                    </tr>
+                    <tr>
+                        <td name="batsmanscoremy"></td>
+                        <td name="scorebatsmanmy"></td>
+                    </tr>
+                    <tr>
+                        <td name="batsmanscoremy"></td>
+                        <td name="scorebatsmanmy"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="displayTeams">
+                <h3>Device team</h3>
+                <table>
+                    <tr>
+                        <th>Batsman</th>
+                        <th>runs</th>
+                    </tr>
+                    <tr>
+                        <td name="batsmanscorediv"></td>
+                        <td name="scorebatsmandiv"></td>
+                    </tr>
+                    <tr>
+                        <td name="batsmanscorediv"></td>
+                        <td name="scorebatsmandiv"></td>
+                    </tr>
+                    <tr>
+                        <td name="batsmanscorediv"></td>
+                        <td name="scorebatsmandiv"></td>
+                    </tr>
+                    <tr>
+                        <td name="batsmanscorediv"></td>
+                        <td name="scorebatsmandiv"></td>
+                    </tr>
+                    <tr>
+                        <td name="batsmanscorediv"></td>
+                        <td name="scorebatsmandiv"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script src="{{url_for('static', filename='js/cricket.js')}}"></script>
+    </body>
+
+</html>

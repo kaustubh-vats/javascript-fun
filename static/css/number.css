@@ -1,0 +1,109 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    background: url(/static/images/gamebg.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: fixed;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.grid{
+    display: none;
+    flex-wrap: wrap;
+    height: 456px;
+    width: 456px;
+}
+.card{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    margin: 5px;
+    background: url('/static/images/block.jpg');
+    border: 2px solid black;
+    color: white;
+    font-family: 'Times New Roman';
+    font-size: 25px;
+}
+#winner{
+    background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.733);
+    display: none;
+    color: white;
+}
+#start{
+    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+    padding: 25px;
+    border-radius: 20px;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.733);
+    color: white;
+}
+.slider{
+    position: relative;
+    display: inline-block;
+    width: 85px;
+    height: 34px;
+    margin: 10px;
+    padding: 10px 20px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  border-radius: 34px;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  color: rgba(0, 0, 0, 0.733);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input:checked + .slider {
+  background-color: #6ef321;
+  color: white;
+}
+
+button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: skyblue;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    display: block;
+    margin: 10px 35px;
+}
+button:hover{
+    background-color: #80ffb0;
+}
+#score{
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 80vw;
+    color: white;
+}
+#player1{
+    float: left;
+}
+#player2{
+    float: right;
+}
+#displayturn{
+    align-items: center;
+    text-align: center;
+}

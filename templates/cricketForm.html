@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form</title>
+        <link rel="icon" href="{{url_for('static', filename='icon/favicon.ico')}}"/> 
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/form.css')}}" /> 
+    </head>
+    <body>
+        <form method="POST" id="myform" onsubmit="return verification()">
+            <select id="tosschoice">
+                <option value="0" id="heads" selected>Heads</option>
+                <option value="1" id="tails">Tails</option>
+            </select>
+            <button type="button" onclick="tossCoin()" id="tossButton">Toss</button>
+            <input name="toss" id="toss" readonly required placeholder="You won the toss (bowling or batting)"/>
+            <h3>Choose 5 player for your team</h3>
+            <input name="mteam1" type="text" id="mteam1" placeholder="Enter name of 1 player of your team" required/>
+            <input name="mteam2" type="text" id="mteam2" placeholder="Enter name of 2 player of your team" required/>
+            <input name="mteam3" type="text" id="mteam3" placeholder="Enter name of 3 player of your team" required/>
+            <input name="mteam4" type="text" id="mteam4" placeholder="Enter name of 4 player of your team" required/>
+            <input name="mteam5" type="text" id="mteam5" placeholder="Enter name of 5 player of your team" required/>
+            <h3>Choose 5 player for your opponents team</h3>
+            <input name="dteam1" type="text" id="dteam1" placeholder="Enter name of 1 player of your opposite team" required/>
+            <input name="dteam2" type="text" id="dteam2" placeholder="Enter name of 2 player of your opposite team" required/>
+            <input name="dteam3" type="text" id="dteam3" placeholder="Enter name of 3 player of your opposite team" required/>
+            <input name="dteam4" type="text" id="dteam4" placeholder="Enter name of 4 player of your opposite team" required/>
+            <input name="dteam5" type="text" id="dteam5" placeholder="Enter name of 5 player of your opposite team" required/>
+            <h3>Overs</h3>
+            <input name="overs" type="number" min="1" max="50" id="overs" placeholder="Eneter total overs for each innings" required/>
+            <h3>Commentry</h3>
+            <select name="commentry" id="commentry">
+                <option value="hindi" selected>Hindi</option>
+                <option value="english">English</option>
+            </select>
+            <button type="submit" value="Continue">Continue</button>
+        </form>
+        <script src="{{url_for('static', filename='js/cricketform.js')}}"></script>
+    </body>
+
+</html>
