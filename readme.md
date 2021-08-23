@@ -13,7 +13,7 @@
 + Then Run this commands in your terminal
 ```
 pip install flask
-pip install pickle
+pip install gunicorn
 ```
 + Then You have to fork this repo and clone it in your device using ```git clone https://github.com/kaustubh-vats/javascript-fun``` command
 + Run the ```main.py``` file
