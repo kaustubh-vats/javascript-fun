@@ -17,6 +17,10 @@ pip install flask
 pip install gunicorn
 ```
 + Then You have to fork this repo and clone it in your device using ```git clone https://github.com/kaustubh-vats/javascript-fun``` command
++ Uncomment the line number 101 of ```main.py```
+```python
+app.run(host='0.0.0.0',port=5000)
+```
 + Run the ```main.py``` file
 + Open any Browser and put [127.0.0.1:5000](127.0.0.1:5000) in url
     + You can also change the port number accordingly
