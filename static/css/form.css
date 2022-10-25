@@ -3,14 +3,14 @@ h1 {
     font-weight: 500;
 }
 body {
-    padding: 15px;
+    padding: 45px;
     margin: 0;
     background: linear-gradient(45deg,skyblue, #80ffb0);
 }
 form{
     display: block;
     width: 630px;
-    padding: 15px;
+    padding: 25px;
     margin: 0 auto;
     background-color: white;
     border-radius: 15px;
@@ -35,7 +35,7 @@ button{
     margin: 0 auto;
 }
 button:hover{
-    background-color: #80ffb0;
+    background-color: #0cc252;
 }
 input:focus{
     outline: none !important;

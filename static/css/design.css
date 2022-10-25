@@ -58,4 +58,5 @@ a{
 a:hover,li:hover{
     color: rgb(34, 227, 252);
     font-size: 50px;
+    transition-delay: .2s;
 }
