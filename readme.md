@@ -1,6 +1,6 @@
 # JavaScript Fun
 ### A Simple webiste having four PC games built with Javascript and served using **Flask Python**
-### To try the app [Click Here](https://javascript-fun.herokuapp.com/){target="_blank"}
+### To try the app [Click Here](https://javascript-fun.herokuapp.com/)
 
 # Pre-requisites
 1. Flask
