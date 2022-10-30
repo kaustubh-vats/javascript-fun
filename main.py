@@ -1,3 +1,4 @@
+# from xml.etree.ElementTree import Comment
 from flask import Flask, render_template, request
 import random
 import pickle
@@ -97,5 +98,7 @@ def sortingForm():
 
 
 #webbrowser.open("http://127.0.0.1:5000/")
+
+# Comment out below line before running the program and Comment it before making any PR
 
 # app.run(host='0.0.0.0',port=5000)
